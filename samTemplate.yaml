@@ -1,4 +1,3 @@
- 
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: BioBeat Funtion Test Name Prop
@@ -6,7 +5,7 @@ Resources:
   FuntionTestNameProp:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: 'test_function_name_prop1'
+      FunctionName: 'test_function_name_prop'
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
       CodeUri: ./LambdaCode

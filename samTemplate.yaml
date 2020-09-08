@@ -11,6 +11,6 @@ Resources:
       Runtime: python3.6
       CodeUri: ./LambdaCode
       Description: 'BioBeat Funtion Test Name Prop'
-      Role: arn:aws:iam::${AWS::AccountId}:role/lambda_basic_execution
+      Role: arn:aws:iam::656606747806:role/lambda_basic_execution
       MemorySize: 128
       Timeout: 30

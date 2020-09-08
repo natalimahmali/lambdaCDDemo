@@ -1,23 +1,15 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: CD Demo Lambda
+Description: BioBeat Funtion Test Name Prop
 Resources:
-  CDDemoLambda:
+  FuntionTestNameProp:
     Type: 'AWS::Serverless::Function'
     Properties:
+      FunctionName: 'test_function_name_prop'
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
       CodeUri: ./LambdaCode
-      Description: 'Lambda function for CD Demo'
+      Description: 'BioBeat Funtion Test Name Prop'
+      Role: arn:aws:iam::${AWS::AccountId}:role/lambda_basic_execution
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::656606747806:role/cloudFormationServiceRole'
-      Events:
-        getAZsAPI:
-          Type: Api
-          Properties:
-            Path: /getazs
-            Method: get
-      Environment:
-        Variables:
-          REGION: ap-southeast-2

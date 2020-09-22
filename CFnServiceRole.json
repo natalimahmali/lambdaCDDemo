@@ -1,80 +1,340 @@
+
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "iam:GetRole",
-                "s3:PutObject",
-                "s3:GetObject",
-                "apigateway:*",
-                "codedeploy:GetDeploymentConfig",
-                "iam:CreateRole",
-                "iam:DeleteRole",
-                "iam:PutRolePolicy",
-                "cloudformation:CreateChangeSet",
-                "s3:GetBucketVersioning",
-                "s3:PutObjectAcl",
-                "s3:GetObjectVersion"
-            ],
-            "Resource": [
-                "arn:aws:codedeploy:eu-west-3:656606747806:deploymentconfig:*",
-                "arn:aws:iam::656606747806:role/*",
-                "arn:aws:cloudformation:eu-west-3:aws:transform/Serverless-2016-10-31",
-                "arn:aws:s3:::biobeat-test-natali",
-                "arn:aws:apigateway:eu-west-3::*"
-            ]
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DetachRolePolicy",
-                "codedeploy:CreateApplication",
-                "s3:*",
-                "codedeploy:RegisterApplicationRevision",
-                "iam:DeleteRolePolicy",
-                "codedeploy:DeleteApplication",
-                "iam:AttachRolePolicy"
-            ],
-            "Resource": [
-                "arn:aws:s3:::codepipeline*",
-                "arn:aws:iam::656606747806:role/*",
-                "arn:aws:codedeploy:eu-west-3:656606747806:application:*"
-            ]
-        },
-        {
-            "Sid": "VisualEditor2",
-            "Effect": "Allow",
-            "Action": [
-                "codedeploy:CreateDeployment",
-                "codedeploy:GetDeployment",
-                "codedeploy:CreateDeploymentGroup"
-            ],
-            "Resource": "arn:aws:codedeploy:eu-west-3:656606747806:deploymentgroup:*"
-        },
-        {
-            "Sid": "VisualEditor3",
-            "Effect": "Allow",
-            "Action": [
-                "s3:GetAccessPoint",
-                "iam:PassRole",
-                "s3:PutAccountPublicAccessBlock",
-                "s3:GetAccountPublicAccessBlock",
-                "s3:ListAllMyBuckets",
-                "s3:ListAccessPoints",
-                "s3:ListJobs",
-                "s3:CreateJob",
-                "s3:HeadBucket"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "VisualEditor4",
-            "Effect": "Allow",
-            "Action": "lambda:*",
-            "Resource": "arn:aws:lambda:eu-west-3:656606747806:function:*"
-        }
-    ]
+
+
+
+
+   "Statement": [
+
+       {
+
+
+           "Action": [
+
+
+               "s3:GetObject",
+
+
+               "s3:GetObjectVersion",
+
+
+               "s3:GetBucketVersioning"
+
+
+           ],
+
+
+           "Resource": "*",
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "s3:PutObject"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:s3:::codepipeline*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "lambda:*"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:lambda:eu-west-3:656606747806:function:*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "apigateway:*"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:apigateway:eu-west-3::*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "iam:GetRole",
+
+
+               "iam:CreateRole",
+
+
+               "iam:DeleteRole",
+
+
+               "iam:PutRolePolicy"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:iam::656606747806:role/*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "iam:AttachRolePolicy",
+
+
+               "iam:DeleteRolePolicy",
+
+
+               "iam:DetachRolePolicy"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:iam::656606747806:role/*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "iam:PassRole"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "cloudformation:CreateChangeSet"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:cloudformation:eu-west-3:aws:transform/Serverless-2016-10-31"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "codedeploy:CreateApplication",
+
+
+               "codedeploy:DeleteApplication",
+
+
+               "codedeploy:RegisterApplicationRevision"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:codedeploy:eu-west-3:656606747806:application:*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "codedeploy:CreateDeploymentGroup",
+
+
+               "codedeploy:CreateDeployment",
+
+
+               "codedeploy:GetDeployment"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:codedeploy:eu-west-3:656606747806:deploymentgroup:*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       },
+
+
+       {
+
+
+           "Action": [
+
+
+               "codedeploy:GetDeploymentConfig"
+
+
+           ],
+
+
+           "Resource": [
+
+
+               "arn:aws:codedeploy:eu-west-3:656606747806:deploymentconfig:*"
+
+
+           ],
+
+
+           "Effect": "Allow"
+
+
+       }
+
+
+   ],
+
+
+   "Version": "2012-10-17"
+
+
 }
+

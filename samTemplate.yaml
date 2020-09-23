@@ -1,9 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
 Description: BioBeat Funtion Test Name Prop
 Resources:
   FuntionTestNameProp:
-    Type: 'AWS::Serverless::Function'
+    Type: 'AWS::Lambda::Function'
     Properties:
       FunctionName: 'natali'
       Handler: lambda_function.lambda_handler

@@ -1,12 +1,12 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: BioBeat Funtion Test Name Prop
+Description: test function 1
 Resources:
-  FuntionTestNameProp:
+  testFunction1:
     Type: 'AWS::Lambda::Function'
     Properties:
-      FunctionName: 'natali'
+      FunctionName: 'test_function_1'
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.8
       CodeUri: ./LambdaCode
       Description: 'BioBeat Funtion Test Name Prop'
       Role: arn:aws:iam::656606747806:role/lambda_basic_execution

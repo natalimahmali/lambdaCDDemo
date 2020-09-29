@@ -12,3 +12,6 @@ Resources:
       Role: arn:aws:iam::656606747806:role/service-role/lambda_query_role
       MemorySize: 128
       Timeout: 30
+      VpcConfig:
+       SubnetIds:
+         - subnet-49dcb220

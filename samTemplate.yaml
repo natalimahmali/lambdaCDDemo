@@ -10,7 +10,7 @@ Resources:
       Runtime: python3.8
       CodeUri: ./LambdaCode
       Description: 'BioBeat test function for vpc'
-      Role: arn:aws:iam::656606747806:role/service-role/lambda_query_role
+      Role: arn:aws:iam::656606747806:role/lambda_basic_execution
       MemorySize: 128
       Timeout: 30
       VpcConfig:

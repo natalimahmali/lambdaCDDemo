@@ -14,5 +14,7 @@ Resources:
       MemorySize: 128
       Timeout: 30
       VpcConfig:
+       SecurityGroupIds:
+         - sg-5070a638
        SubnetIds:
          - subnet-49dcb220

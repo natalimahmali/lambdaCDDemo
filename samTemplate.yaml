@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: test function for vpc
 Resources:
-  testFunction1:
+  testFunctionForVpc:
     Type: 'AWS::Lambda::Function'
     Properties:
       FunctionName: 'test_function_for_vpc'

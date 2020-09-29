@@ -20,22 +20,6 @@ def lambda_handler(event, context):
             "client_id": client_id
         }
         result = engine.read_value(sql, params)
-        print(result)
-        result.Alerts_On = int(result.Alerts_On)
-        result.HR_Alerts_On = int(result.HR_Alerts_On)
-        result.SBP_Alerts_On = int(result.SBP_Alerts_On)
-        result.DBP_Alerts_On = int(result.DBP_Alerts_On)
-        result.RR_Alerts_On = int(result.RR_Alerts_On)
-        result.SPO2_Alerts_On = int(result.SPO2_Alerts_On)
-        result.CI_Alerts_On = int(result.CI_Alerts_On)
-        result.CO_Alerts_On = int(result.CO_Alerts_On)
-        result.SV_Alerts_On = int(result.SV_Alerts_On)
-        result.SVR_Alerts_On = int(result.SVR_Alerts_On)
-        result.Interval_Auto_Change = int(result.Interval_Auto_Change)
-        result.Organization_Interval = int(result.Organization_Interval)
-        result.Organization_Default_Interval = int(result.Organization_Default_Interval)
-        #result.Alerts_On = int(result.Alerts_On)
-        #print(result.to_dict())
         return result.to_dict()
     except Exception as e:
         raise e
